@@ -1,53 +1,38 @@
 <?php
+$condition = 10;
+$condition2 = 5;
+$name = "Pat";
+$isActive = true;
+$color = 'blue';
+
 // If / elseif / else
 if ($condition == 10) {
-    echo 'condition 10';
+    echo 'condition 10<br>';
 } elseif  ($condition == 5) {
-    echo 'condition 5';
+    echo 'condition 5<br>';
 } else {
     echo 'all other conditions';
 }
 
 // And condition = &&
+echo "<br> And condition";
 if ($condition === 10 && $condition2 === 5) {
-    echo '10 and 5';
+    echo '<br> 10 and 5<br>';
 }
 
 // Or condition = ||
+echo "<br> Or condition";
 if ($condition === 10 || $condition2 === 5) {
-    echo '10 or 5';
+    echo '<br>10 or 5<br>';
 }
 
-// One line 
-if ($isActive) return true;
+// One line return
+if ($isActive) return 'Active';
 
 // Null check
 if (is_null($name)) {
     // do something...
 }
-
-// Ternary operator (true : false)
-echo $isValid ? 'user valid' : 'user not valid';
-
-//Null Coalesce Operator
-echo $name ?? 'Mike';  //output 'Mike' if $name is null
-
-//Null Coalesce Assignment
-$name ??= 'Mike';
-
-// Null Safe Operator (PHP 8) will return null if one ? is null
-echo $user?->profile?->activate();
-
-// Null Safe + Null Coalesce (if null will return 'No user profile')
-echo $user?->profile?->activate() ?? 'Not applicable';
-
-//Spaceship operator return -1 0 1
-$names = ['Mike', 'Paul', 'John'];
-usort($names, function($a, $b) {
-    return $a <=> $b;
-});
-// ['John', 'Mike', 'Paul']
-
 
 // Compare same variable with multiple values
 switch ($color) {
