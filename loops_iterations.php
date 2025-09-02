@@ -1,20 +1,23 @@
 <?php
 //for loop
+echo "<b>for loop</b><br>";
 for ($i = 0; $i < 20; $i++) {
-    echo "i value = " . $i;
+    echo "i = $i<br>    ";
 }
 
 //while loop
+echo "<b>while loop</b><br>";
 $number = 1;
 while ($number < 10) {
-    echo 'value : ' . $number ;
+    echo 'value : ' . $number . "<br>";
     $number += 1;
 }
 
 //do while
+echo "<b>do while loop</b><br>";
 $number = 1;
 do {
-    echo 'value : ' . $number ;
+    echo 'value : ' . $number . "<br>";
     $number += 1;
 } while ($number < 10);
 
